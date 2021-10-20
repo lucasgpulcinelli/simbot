@@ -62,6 +62,8 @@ async def on_message(message):
             return
 
         args = message.content.split()
+        if len(args) == 0: #if someone sent an image without a comment, for instance
+            return
 
         #is this message directed to us?
         if args[0] != strs_dict[consts.bot_cmd_xml]:
