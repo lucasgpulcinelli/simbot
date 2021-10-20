@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<strings>
+
+<string name="ready msg">Hello world! I'm running</string>
+
+<string name="bot message command">template-bot</string>
+
+<string name="bot name">template bot</string>
+
+<string name="play not in channel">
+    <l>You are not in a voice channel!</l>
+</string>
+
+<string name="play no URL">Please include an youtube URL in the command...</string>
+
+<string name="no command found">There is no command! Use "template-bot help" for help!</string>
+
+<string name="internal error">
+    <l>Internal error!</l>
+    <l>Error message: </l>
+</string>
+
+<string name="arguments">arguments</string>
+
+<string name="usage header">
+    <l>Here are the commands and a description:</l>
+</string>
+
+<array name="commands help">
+    <array name="random">
+        <string name="cmd">random</string>
+        <string name="desc">
+            <l>Gets a random quote from a pool</l>
+        </string>
+    </array>
+    <array name="play">
+        <string name="cmd">play</string>
+        <array name="args">
+            <array name="url">
+                <string name="arg">URL</string>
+                <string name="desc">
+                    <l>an youtube URL</l>
+                </string>
+            </array>
+        </array>
+        <string name="desc">
+            <l>Enters in your channel and plays something</l>
+        </string>
+    </array>
+    <array name="help">
+        <string name="cmd">help</string>
+        <string name="desc">Display this help message</string>
+    </array>
+</array>
+
+</strings>
