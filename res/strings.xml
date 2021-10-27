@@ -14,6 +14,12 @@
 
 <string name="play no URL">Please include an youtube URL in the command...</string>
 
+<string name="entering channel">Entering channel </string>
+
+<string name="already in channel">I am already in another channel!</string>
+
+<string name="song in queue">Ok, the song is now in the queue</string>
+
 <string name="no command found">There is no command! Use "template-bot help" for help!</string>
 
 <string name="internal error">

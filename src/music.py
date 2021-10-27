@@ -3,6 +3,8 @@ import queue
 import threading
 import sys
 from common import client
+from xml_strings import strs_dict, cmds_dict, help_str
+import consts
 
 music_queue = queue.Queue()
 bot_voice_client = None
@@ -50,7 +52,10 @@ async def playMusic(channel, url):
         music_queue.put(url)
         threading.Thread(target=playWholeQueue).start()
 
-        return "going to " + channel.name
+        return strs_dict[consts.play_entering_channel] + channel.name
+
+    if channel != bot_voice_client.channel:
+        return strs_dict[consts.play_another_channel]
 
     music_queue.put(url)
-    return "Ok, this song is in the queue now"
+    return strs_dict[consts.play_now_in_queue]
