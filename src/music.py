@@ -1,9 +1,11 @@
 import discord
 import queue
 import threading
-import sys
+import subprocess
+import time
+
 from common import client
-from xml_strings import strs_dict, cmds_dict, help_str
+from xml_strings import strs_dict
 import consts
 
 music_queue = queue.Queue()
@@ -27,9 +29,11 @@ def playWholeQueue():
 
     try:
         while True:
-            url = music_queue.get(timeout=600)
+            url = music_queue.get(timeout=10)
 
-            stream = discord.FFmpegOpusAudio(f"res/{url}.mp3")
+            p = subprocess.Popen(["youtube-dl", "-f", "bestaudio", "-o", "-", url], stdout=subprocess.PIPE)
+            stream = discord.FFmpegOpusAudio(p.stdout, pipe=True)
+            time.sleep(2)
             bot_voice_client.play(stream, after=playDone)
             
             is_playing_done.wait()
