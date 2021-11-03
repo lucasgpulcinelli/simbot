@@ -20,6 +20,8 @@
 
 <string name="song in queue">Ok, the song is now in the queue</string>
 
+<string name="now playing">Now playing: </string>
+
 <string name="no command found">There is no command! Use "template-bot help" for help!</string>
 
 <string name="internal error">

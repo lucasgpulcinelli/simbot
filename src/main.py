@@ -35,7 +35,7 @@ async def process_command(message, args):
         if len(args) < 3:
             return strs_dict[consts.play_no_url_xml]
         
-        return await music.playMusic(voiceState.channel, args[2])
+        return await music.playMusic(message.channel, voiceState.channel, args[2])
 
     #and so on
     if cmd_is(args[1], consts.cmd_help_xml):
