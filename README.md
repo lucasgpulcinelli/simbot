@@ -18,3 +18,9 @@ Install the discord package via pip. It also needs the random and xml.etree modu
 
 ## Licensing:
 All files in this project are licensed under the BSD 3-Clause License, made in it's entirety by Lucas Eduardo Gulka Pulcinelli.
+
+## Documentation:
+So far, comments have been sparce, so this flow chart was created to help with understanding:
+
+
+![flowchart](./flowchart.svg)
